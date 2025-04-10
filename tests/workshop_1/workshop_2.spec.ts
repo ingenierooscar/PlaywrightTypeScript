@@ -17,7 +17,7 @@ test('Form submition', async ({page}) => {
     await page.waitForTimeout(3000);
 })
 
-test.only('Handling form', async ({page}) => { 
+test('Handling form', async ({page}) => { 
     await page.goto('https://demo.playwright.dev/todomvc/#/');
     const placeHolder = '[placeholder="What needs to be done?"]';
     await page.locator(placeHolder).fill('oscar rodriguez');
