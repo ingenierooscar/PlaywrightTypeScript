@@ -23,7 +23,7 @@ test.skip('Double Click', async ({page}) => {
     await page.waitForTimeout(3000);
 })
 
-test.only('Drag and Drop', async ({page}) => {
+test.skip('Drag and Drop', async ({page}) => {
     await page.goto('file:///Users/oscarrodriguez/Downloads/index.html');
     //await page.dragAndDrop('.drag-source', '.drop-target');
     await page.hover('.drag-source');
@@ -33,3 +33,18 @@ test.only('Drag and Drop', async ({page}) => {
     expect(await page.locator('.drop-target').textContent()).toContain('Success');
     await page.waitForTimeout(3000);
 })
+
+test.skip('Iframe', async ({page}) => {
+    await page.goto('file:///Users/oscarrodriguez/Downloads/index.html');
+    const iframeElement = await page.frame({name: 'iframe-name'});
+    const inputSelector = '#iframe-input';
+
+    if (iframeElement) {
+        await iframeElement.type(inputSelector, 'Hello Playwright!');
+        expect(await iframeElement.locator(inputSelector).inputValue()).toContain('Hello Playwright!');
+    } else {
+        console.error('Iframe not found');
+    }
+    await page.waitForTimeout(3000);
+}
+)
