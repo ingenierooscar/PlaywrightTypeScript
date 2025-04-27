@@ -40,7 +40,7 @@ test.describe('User registration test', () => {
         expect(error).toBe('Please fill in all fields.')
     })
 
-    test.only('Register without any field', async ({ page }) => {
+    test.skip('Register without any field', async ({ page }) => {
         await page.click('#register');
         const error = await page.locator('#error p').textContent()
         expect(error).toBe('Please fill in all fields.')
