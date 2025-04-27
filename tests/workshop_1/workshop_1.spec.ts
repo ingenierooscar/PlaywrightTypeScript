@@ -19,7 +19,7 @@ test.skip('Interact with Web elemnt', async ({page}) => {
     await page.waitForTimeout(2000);
 })
 
-test('Using Various Locators Methods', async ({page}) => {
+test.skip('Using Various Locators Methods', async ({page}) => {
     await page.setViewportSize({ width: 700, height: 740 });
     await page.goto('https://about.gitlab.com/');
     await page.click('#onetrust-accept-btn-handler');

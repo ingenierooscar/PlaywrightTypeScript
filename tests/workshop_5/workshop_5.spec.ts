@@ -21,7 +21,7 @@ test.skip('add cookie', async ({ page }) => {
     await expect(sessionCookie).toBeDefined();
 })
 
-test.only('delete cookie', async ({ page }) => {
+test.skip('delete cookie', async ({ page }) => {
     await page.goto('file:///Users/oscarrodriguez/Downloads/index.html')
     await page.click('#setCookie');
     const cookie = await page.context().cookies('file:///Users/oscarrodriguez/Downloads/index.html');

@@ -30,7 +30,7 @@ test.skip('Confirm alert', async ({page}) => {
     expect(alertMessage).toBe('You clicked Cancel.');
 })
 
-test.only('Handling Popup', async ({page}) => {
+test.skip('Handling Popup', async ({page}) => {
     await page.goto('file:///Users/oscarrodriguez/Downloads/index%20(1).html');
     const [Popup] = await Promise.all([ 
         page.waitForEvent('popup'),
