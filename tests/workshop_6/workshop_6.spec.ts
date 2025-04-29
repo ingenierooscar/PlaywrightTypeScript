@@ -17,7 +17,7 @@ test.describe('User registration test', () => {
         await page.fill('#address', testData.address);
         await page.fill('#number', testData.number);
         await page.click('#register');
-        await page.waitForTimeout(3000);ß
+        await page.waitForTimeout(3000);
 
         const firstName = await page.locator('#displayFirstName').textContent();
         const lastName = await page.locator('#displayLastName').textContent();
