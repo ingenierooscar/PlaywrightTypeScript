@@ -10,7 +10,7 @@ test.describe('Sample Test', ()=>{
         await pageObject.open('file:///Users/oscarrodriguez/Documents/playWright/tests/workshop_7/index (1).html');
     })
 
-    test.only('Test 1: Fill all inputs',async ()=>{
+    test('Test 1: Fill all inputs',async ()=>{
         await pageObject.fillFirstName('John');
         await pageObject.fillAge('30');
         await pageObject.checkIsStudent();
